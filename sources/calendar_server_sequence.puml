@@ -1,32 +1,31 @@
 @startuml
 
-actor User
-actor Server
+actor A
+actor B
+actor C
+box " " #White
+	actor Server
+end box
+actor Mail
+actor Server2
 
-User -> Server : Login
-User -> Server : Create event, Turn on notification
-User <- Server : Sends notification
+A -> A : Create event with B & C
+A -> Server : Register event
+A -> Mail : Sends email to B & C
+Mail -> B
+Mail -> C
+B -> B : Accepts
+B -> Server2
+Server2 -> A : Sends answer
+C -> C : Declines
+C -> Server2
+Server2 -> A : Sends answer
+A -> Server : Updates event
 
 newpage
 
-User -> Server : Login
-User -> Server : Create event
-User -> Server : Modify event to push notification
-User <- Server : Sends notification
-
-newpage
-
-User -> Server : Login
-User -> Server : Search for event
-User <- Server : 0 result
-User -> Server : Corrects search
-User <- Server : 1 result
-User -> Server : Delete event
-
-newpage
-
-User -> Server : Login
-User -> Server : Creates event in another timezone
-Server -> User : Notifies user according to the set timezone
+A -> A : Create event with B & C
+A -> Server : Register event
+Server -> A : User B doesn't exist
 
 @enduml
