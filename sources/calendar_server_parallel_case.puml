@@ -1,0 +1,19 @@
+@startuml
+
+title Parallel Case
+actor A
+actor B
+box " " #White
+	actor Server
+end box
+actor Mail
+
+A -> A : Create event
+A -> Server : A+B
+Server -> B
+B -> B : Accept event
+B -> Server
+B -> Mail
+Mail -> A
+
+@enduml
