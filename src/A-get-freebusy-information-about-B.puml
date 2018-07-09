@@ -1,0 +1,18 @@
+@startuml
+
+actor "CI\nA" as A
+actor "OrgX\nB" as B
+
+box " " #White
+actor Server
+end box
+
+actor Mail
+actor "OrgX\nServer" as Server2
+
+A -> Server : Checks B is free or busy between X Y time
+Server -> Server2 : Forwards the request
+Server2 -> Server : Sends answer
+Server -> A : Sends answer
+
+@enduml
