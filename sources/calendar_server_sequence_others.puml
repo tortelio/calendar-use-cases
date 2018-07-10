@@ -6,9 +6,9 @@ box " " #White
 	actor Server
 end box
 actor Mail
-actor Server2
+actor "OrgX\nServer" as Server2
 
-A -> A : Create event
+A -> A : Create event with B
 A -> Server
 A -> Mail : Email to B
 Mail -> B
@@ -17,5 +17,11 @@ B -> Server2
 B -> Mail
 Mail -> A
 A -> Server : Update event
+
+newpage
+
+A -> Server : Checks if B has event at X time
+Server -> Server2 : Forwards the request
+Server2 -> A : Sends answer
 
 @enduml

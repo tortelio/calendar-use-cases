@@ -16,4 +16,14 @@ B -> Server
 B -> Mail
 Mail -> A
 
+newpage
+
+A -> A : Create event with B
+A -> Server : Register event
+A -> Mail : Sends email to B
+Mail -> B
+A -> A : Deletes the event
+A -> Server
+Mail -> B : Notifies about deletion
+
 @enduml
