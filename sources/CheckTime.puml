@@ -1,0 +1,15 @@
+@startuml
+
+actor "CI\nA" as A
+actor "OrgX\nB" as B
+box " " #White
+	actor Server
+end box
+actor Mail
+actor "OrgX\nServer" as Server2
+
+A -> Server : Checks if B has event at X time
+Server -> Server2 : Forwards the request
+Server2 -> A : Sends answer
+
+@enduml

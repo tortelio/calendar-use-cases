@@ -1,0 +1,11 @@
+@startuml
+
+actor A
+box " " #White
+	actor Server
+end box
+
+A -> Server : Searches an event
+A -> Server : Deletes the event
+
+@enduml

@@ -1,5 +1,8 @@
 uml: 
-	plantuml -tpng sources/calendar_server_sequence_others.puml -o "../pngs"
-	plantuml -tpng sources/calendar_server_use_case.puml -o "../pngs"
-	plantuml -tpng sources/calendar_server_parallel_case.puml -o "../pngs"
-	plantuml -tpng sources/calendar_server_sequence.puml -o "../pngs"
+	plantuml -tpng sources/TwoPeopleEvent.puml -o "../pngs"
+	plantuml -tpng sources/CheckTime.puml -o "../pngs"
+	plantuml -tpng sources/Parallel_case.puml -o "../pngs"
+	plantuml -tpng sources/Parallel_case_delete.puml -o "../pngs"
+	plantuml -tpng sources/ThreePeopleEvent.puml -o "../pngs"
+	plantuml -tpng sources/ThreePeopleEvent_NoUser.puml -o "../pngs"
+	plantuml -tpng sources/EventSearch.puml -o "../pngs"
