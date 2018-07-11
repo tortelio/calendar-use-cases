@@ -15,5 +15,6 @@ B -> B : Accept event
 B -> Server
 B -> Mail
 Mail -> A
+A -> Server : Updates the event
 
 @enduml

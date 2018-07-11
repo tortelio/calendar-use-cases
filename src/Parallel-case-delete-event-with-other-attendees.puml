@@ -12,8 +12,8 @@ A -> A : Create event with B
 A -> Server : Register event
 A -> Mail : Sends email to B
 Mail -> B
-A -> A : Deletes the event
-A -> Server
+A -> Server : Deletes the event
+A <- Server : Sends confirmation
 Mail -> B : Notifies about deletion
 
 @enduml

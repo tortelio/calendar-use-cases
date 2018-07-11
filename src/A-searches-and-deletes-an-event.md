@@ -1,7 +1,7 @@
-%%Search an event
----------REQUEST-------------------------------------------------------------------------------------------------------------
-REPORT **collection to search** HTTP/1.1
-Host: **cal.example.com**
+1. Sends search request with the selected filters
+```http
+REPORT *collection to search* HTTP/1.1
+Host: *cal.example.com*
 Depth: 1
 Content-Type: application/xml; charset="utf-8"
 Content-Length: xxxx
@@ -22,8 +22,9 @@ Content-Length: xxxx
        </C:comp-filter>
      </C:filter>
 </C:calendar-query>
-
----------RESPONSE-------------------------------------------------------------------------------------------------------------
+```
+2. Servers sends events matching the filters
+```http
 HTTP/1.1 207 Multi-Status
 Date: Sat, 11 Nov 2006 09:32:12 GMT
 Content-Type: application/xml; charset="utf-8"
@@ -79,5 +80,9 @@ END:VCALENDAR
    </D:propstat>
  </D:response>
 </D:multistatus>
+```
+3. A deletes the event
+    * Same as "A-deletes-an-event"'s 1.
 
----------------------------------------------------------------------------------------------------------------------------------------
+4. Server sends confirmation
+    * Same as "A-deletes-an-event"'s 2.

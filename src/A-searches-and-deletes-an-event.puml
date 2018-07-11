@@ -6,6 +6,8 @@ box " " #White
 end box
 
 A -> Server : Searches an event
+Server -> A : Sends the found event
 A -> Server : Deletes the event
+Server -> A : Sends confirmation
 
 @enduml

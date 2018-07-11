@@ -1,0 +1,12 @@
+@startuml
+
+actor A
+box " " #White
+	actor Server
+end box
+
+A -> A : Creates event with B
+A -> Server : Registers event
+A -> Server: Adds C to the event
+
+@enduml
