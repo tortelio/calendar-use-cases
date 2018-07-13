@@ -1,13 +1,14 @@
 @startuml
 
 actor A
-actor B
-actor C
 box " " #White
 	actor Server
 end box
 actor Mail
 actor "OrgX\nServer" as Server2
+
+actor B
+actor C
 
 A -> A : Create event with B & C
 A -> Server : Register event

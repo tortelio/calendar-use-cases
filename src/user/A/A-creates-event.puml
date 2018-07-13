@@ -1,0 +1,7 @@
+@startuml
+
+actor A
+actor Server
+actor Mail
+
+@enduml
