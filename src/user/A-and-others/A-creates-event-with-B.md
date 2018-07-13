@@ -8,6 +8,7 @@ Content-Length: xxxx
 
 %%Insert event ics here
 ```
+
 2. A gets response from server
 ```http
 HTTP/1.1 201 Created

@@ -1,0 +1,12 @@
+@startuml
+
+actor A
+actor Admin
+actor Server
+actor Mail
+
+Admin -> Server : Creates calendar for A
+Server -> Admin : Sends confirmation and adds calendar
+Mail -> A : Notifies A about the created calendar
+
+@enduml

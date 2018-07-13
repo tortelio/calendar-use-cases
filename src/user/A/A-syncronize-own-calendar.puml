@@ -1,0 +1,9 @@
+@startuml
+
+actor A
+actor Server
+
+A -> Server : Sends sync request
+Server -> A : Syncs calendar
+
+@enduml

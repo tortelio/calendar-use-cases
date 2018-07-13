@@ -1,4 +1,4 @@
-1. A sends request to delete an event
+1. Admin sends request to delete A's calendar
 ```http
 DELETE  /container/ HTTP/1.1
 Host: www.example.com
@@ -19,3 +19,5 @@ Content-Length: xxxx
 </d:response>
 </d:multistatus>
 ```
+
+3. A gets email about the removal of the calendar

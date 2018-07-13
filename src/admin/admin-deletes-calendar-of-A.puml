@@ -1,0 +1,12 @@
+@startuml
+
+actor A
+actor Admin
+actor Server
+actor Mail
+
+Admin -> Server : Sends request to delete A's calendar
+Server -> Admin : Sends confirmation
+Mail -> A : Notifies A about the removal of the calendar
+
+@enduml

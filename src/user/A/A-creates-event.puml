@@ -4,4 +4,8 @@ actor A
 actor Server
 actor Mail
 
+A -> A : Create event
+A -> Server
+Server -> A : Sends Confirmation
+
 @enduml
